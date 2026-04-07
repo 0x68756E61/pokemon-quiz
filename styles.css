@@ -1,11 +1,12 @@
 :root {
-  --bg: #0d1326;
-  --bg-soft: rgba(18, 30, 60, 0.84);
-  --panel: rgba(11, 18, 38, 0.82);
+  --bg: #07111f;
+  --panel: rgba(10, 16, 34, 0.9);
+  --panel-strong: rgba(16, 24, 48, 0.96);
   --panel-border: rgba(255, 255, 255, 0.12);
   --text: #f7f8fc;
-  --muted: rgba(247, 248, 252, 0.7);
+  --muted: rgba(247, 248, 252, 0.72);
   --yellow: #ffd54a;
+  --yellow-deep: #ffb524;
   --pink: #ff5da8;
   --sky: #69d7ff;
   --green: #78f29a;
@@ -17,19 +18,29 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
   font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
   background:
-    radial-gradient(circle at top, rgba(105, 215, 255, 0.18), transparent 30%),
-    radial-gradient(circle at 80% 20%, rgba(255, 93, 168, 0.22), transparent 26%),
-    linear-gradient(180deg, #101935 0%, #0a1021 100%);
+    radial-gradient(circle at top, rgba(105, 215, 255, 0.16), transparent 32%),
+    radial-gradient(circle at 82% 16%, rgba(255, 93, 168, 0.19), transparent 25%),
+    linear-gradient(180deg, #0d1730 0%, #060b16 100%);
   color: var(--text);
 }
 
 button {
   font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
 }
 
 .app-shell {
@@ -41,7 +52,8 @@ button {
   padding: 24px;
 }
 
-.bg-orb {
+.bg-orb,
+.bg-glow {
   position: absolute;
   border-radius: 999px;
   filter: blur(60px);
@@ -65,14 +77,22 @@ button {
   bottom: -20px;
 }
 
+.bg-glow {
+  width: 420px;
+  height: 420px;
+  background: rgba(255, 213, 74, 0.12);
+  inset: auto auto 20% 50%;
+  transform: translateX(-50%);
+}
+
 .bg-grid {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 32px 32px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 90%);
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72), transparent 92%);
   pointer-events: none;
 }
 
@@ -82,15 +102,26 @@ button {
   min-height: 720px;
   padding: 34px;
   border-radius: 36px;
-  background: linear-gradient(180deg, rgba(17, 26, 52, 0.9), rgba(9, 14, 30, 0.96));
+  background: linear-gradient(180deg, rgba(16, 25, 51, 0.92), rgba(7, 12, 25, 0.97));
   border: 1px solid var(--panel-border);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
 }
 
+.quiz-card::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
 .screen {
   display: none;
   min-height: 652px;
+  position: relative;
+  z-index: 1;
 }
 
 .screen.active {
@@ -115,6 +146,25 @@ button {
   font-size: 13px;
   color: #0d1326;
   background: linear-gradient(135deg, var(--yellow), #fff199);
+}
+
+.feature-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.feature-pills span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(247, 248, 252, 0.92);
+  font-size: 14px;
+  font-weight: 700;
 }
 
 h1,
@@ -145,7 +195,7 @@ h1 {
   border: 0;
   border-radius: 18px;
   padding: 16px 28px;
-  background: linear-gradient(135deg, var(--yellow), #ffb627);
+  background: linear-gradient(135deg, var(--yellow), var(--yellow-deep));
   color: #111728;
   font-weight: 800;
   cursor: pointer;
@@ -167,7 +217,11 @@ h1 {
   justify-content: space-between;
   gap: 24px;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
+}
+
+.header-copy {
+  min-width: 0;
 }
 
 .label {
@@ -196,11 +250,30 @@ h1 {
   box-shadow: 0 0 16px rgba(255, 213, 74, 0.8);
 }
 
+.progress-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  margin-bottom: 26px;
+}
+
+.progress-fill {
+  width: 10%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--yellow), var(--pink));
+  box-shadow: 0 0 16px rgba(255, 93, 168, 0.36);
+  transition: width 0.28s ease;
+}
+
 .timer-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .timer-ring {
@@ -234,12 +307,13 @@ h1 {
   margin-bottom: 28px;
   padding: 28px;
   border-radius: 28px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+  background: linear-gradient(135deg, rgba(255,255,255,0.09), rgba(255,255,255,0.03));
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 #pokemon-name {
   font-size: clamp(40px, 7vw, 72px);
+  word-break: keep-all;
 }
 
 .choices {
@@ -252,7 +326,9 @@ h1 {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03)),
+    rgba(255, 255, 255, 0.04);
   border-radius: 28px;
   cursor: pointer;
   min-height: 320px;
@@ -267,8 +343,22 @@ h1 {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255,255,255,0.08), transparent 45%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.09), transparent 45%);
   pointer-events: none;
+}
+
+.choice-card::after {
+  content: "선택";
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(247, 248, 252, 0.84);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
 }
 
 .choice-card:hover:not(:disabled) {
@@ -290,13 +380,25 @@ h1 {
 }
 
 .choice-card.correct {
-  border-color: rgba(120, 242, 154, 0.9);
+  border-color: rgba(120, 242, 154, 0.92);
   box-shadow: 0 0 0 1px rgba(120, 242, 154, 0.5), 0 18px 35px rgba(31, 161, 86, 0.2);
+}
+
+.choice-card.correct::after {
+  content: "정답";
+  background: rgba(120, 242, 154, 0.22);
+  color: #d8ffe4;
 }
 
 .choice-card.wrong {
   border-color: rgba(255, 123, 123, 0.9);
   box-shadow: 0 0 0 1px rgba(255, 123, 123, 0.45), 0 18px 35px rgba(173, 31, 31, 0.18);
+}
+
+.choice-card.wrong::after {
+  content: "오답";
+  background: rgba(255, 123, 123, 0.2);
+  color: #ffe1e1;
 }
 
 .choice-card.dimmed {
@@ -346,8 +448,12 @@ h1 {
 @media (max-width: 900px) {
   .quiz-card {
     min-height: auto;
-    padding: 24px;
-    border-radius: 28px;
+    padding: 22px;
+    border-radius: 30px;
+  }
+
+  .quiz-card::after {
+    border-radius: 29px;
   }
 
   .screen {
@@ -356,28 +462,126 @@ h1 {
 
   .choices {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .choice-card {
-    min-height: 220px;
+    min-height: 200px;
+  }
+
+  .choice-card img {
+    max-width: 180px;
   }
 }
 
 @media (max-width: 640px) {
+  body {
+    background:
+      radial-gradient(circle at top, rgba(105, 215, 255, 0.16), transparent 36%),
+      radial-gradient(circle at 100% 10%, rgba(255, 93, 168, 0.22), transparent 28%),
+      linear-gradient(180deg, #0b1530 0%, #060b16 100%);
+  }
+
   .app-shell {
-    padding: 12px;
+    padding: 10px;
+  }
+
+  .quiz-card {
+    width: 100%;
+    padding: 16px;
+    border-radius: 24px;
+    min-height: calc(100vh - 20px);
+  }
+
+  .quiz-card::after {
+    border-radius: 23px;
+  }
+
+  .screen {
+    min-height: calc(100vh - 52px);
+  }
+
+  #start-screen,
+  #result-screen {
+    justify-content: center;
+  }
+
+  .feature-pills {
+    gap: 8px;
+  }
+
+  .feature-pills span {
+    font-size: 13px;
+    padding: 9px 12px;
   }
 
   .quiz-header {
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: stretch;
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  .header-copy {
+    flex: 1;
+  }
+
+  .stat-row {
+    font-size: 17px;
+    gap: 8px;
   }
 
   .timer-wrap {
-    align-self: flex-end;
+    min-width: 88px;
+    align-self: flex-start;
+  }
+
+  .timer-ring {
+    width: 78px;
+    height: 78px;
+  }
+
+  .timer-ring span {
+    width: 56px;
+    height: 56px;
+    font-size: 28px;
+  }
+
+  .progress-track {
+    margin-bottom: 18px;
   }
 
   .question-panel {
-    padding: 22px;
+    padding: 18px;
+    margin-bottom: 18px;
+    border-radius: 22px;
+  }
+
+  #pokemon-name {
+    font-size: clamp(34px, 10vw, 52px);
+    line-height: 1.08;
+  }
+
+  .choice-card {
+    min-height: 164px;
+    border-radius: 22px;
+    padding: 14px;
+  }
+
+  .choice-card::after {
+    left: 12px;
+    top: 12px;
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .feedback {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .primary-button {
+    width: 100%;
+    justify-content: center;
   }
 }

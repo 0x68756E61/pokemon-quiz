@@ -2,8 +2,9 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>포켓몬 이름 맞히기 퀴즈</title>
+    <meta name="description" content="이름을 보고 알맞은 포켓몬 사진을 고르는 10문제 퀴즈" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -13,6 +14,7 @@
     <div class="app-shell">
       <div class="bg-orb orb-1"></div>
       <div class="bg-orb orb-2"></div>
+      <div class="bg-glow"></div>
       <div class="bg-grid"></div>
 
       <main class="quiz-card">
@@ -23,12 +25,19 @@
             포켓몬 이름을 보고 사진 3개 중 정답을 고르세요.<br />
             총 10문제, 문제당 10초, 10점 만점입니다.
           </p>
+
+          <div class="feature-pills">
+            <span>⚡ 10초 타이머</span>
+            <span>🖼️ 3지선다</span>
+            <span>🏆 10문제 승부</span>
+          </div>
+
           <button id="start-button" class="primary-button">게임 시작</button>
         </section>
 
         <section id="quiz-screen" class="screen" aria-live="polite">
           <header class="quiz-header">
-            <div>
+            <div class="header-copy">
               <p class="label">문제 진행</p>
               <div class="stat-row">
                 <span id="question-progress">1 / 10</span>
@@ -36,6 +45,7 @@
                 <span id="score-progress">점수 0</span>
               </div>
             </div>
+
             <div class="timer-wrap">
               <div class="timer-ring">
                 <span id="timer-text">10</span>
@@ -43,6 +53,10 @@
               <p class="timer-label">초 남음</p>
             </div>
           </header>
+
+          <div class="progress-track" aria-hidden="true">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
 
           <section class="question-panel">
             <p class="label">이 포켓몬은 누구일까요?</p>
