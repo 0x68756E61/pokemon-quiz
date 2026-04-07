@@ -12,6 +12,7 @@ const state = {
   locked: false,
   audioEnabled: false,
   audioContext: null,
+  bgm: null,
 };
 
 const elements = {
@@ -35,6 +36,8 @@ boot();
 
 async function boot() {
   try {
+    setupBackgroundMusic();
+
     const response = await fetch(DATA_PATH);
     if (!response.ok) {
       throw new Error('데이터 파일을 불러오지 못했습니다.');
@@ -84,6 +87,7 @@ function normalizePokemon(items) {
 
 function startGame() {
   enableAudio();
+  startBackgroundMusic();
   clearTimer();
   state.score = 0;
   state.currentIndex = 0;
@@ -226,6 +230,7 @@ function nextQuestion() {
 
 function finishGame() {
   clearTimer();
+  stopBackgroundMusic();
   switchScreen('result');
   elements.finalScore.textContent = String(state.score);
   elements.resultMessage.textContent = getResultMessage(state.score);
@@ -258,6 +263,7 @@ function clearTimer() {
 }
 
 function showFatalError(message) {
+  stopBackgroundMusic();
   switchScreen('start');
   elements.startScreen.innerHTML = `
     <div class="badge">ERROR</div>
@@ -275,17 +281,39 @@ function shuffle(array) {
 }
 
 function enableAudio() {
-  if (state.audioEnabled) return;
+  if (!state.audioEnabled) {
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    if (AudioContextClass) {
+      state.audioContext = new AudioContextClass();
+      state.audioEnabled = true;
+    }
+  }
 
-  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-  if (!AudioContextClass) return;
-
-  state.audioContext = new AudioContextClass();
-  state.audioEnabled = true;
-
-  if (state.audioContext.state === 'suspended') {
+  if (state.audioContext?.state === 'suspended') {
     state.audioContext.resume().catch(() => {});
   }
+}
+
+function setupBackgroundMusic() {
+  const bgm = new Audio('./data/bg.m4a');
+  bgm.loop = true;
+  bgm.volume = 0.14;
+  bgm.preload = 'auto';
+  state.bgm = bgm;
+}
+
+function startBackgroundMusic() {
+  if (!state.bgm) return;
+  state.bgm.pause();
+  state.bgm.currentTime = 0;
+  state.bgm.volume = 0.14;
+  state.bgm.play().catch(() => {});
+}
+
+function stopBackgroundMusic() {
+  if (!state.bgm) return;
+  state.bgm.pause();
+  state.bgm.currentTime = 0;
 }
 
 function playCorrectSound() {
