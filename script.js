@@ -1,6 +1,8 @@
 const QUIZ_LENGTH = 10;
 const QUESTION_TIME = 10;
 const DATA_PATH = './data/pokemon_gen1_ko_images.json';
+const DEFAULT_BGM_VOLUME = 0.14;
+const DEFAULT_SFX_VOLUME = 1;
 
 const state = {
   pokemonPool: [],
@@ -13,6 +15,10 @@ const state = {
   audioEnabled: false,
   audioContext: null,
   bgm: null,
+  bgmEnabled: true,
+  sfxEnabled: true,
+  bgmVolume: DEFAULT_BGM_VOLUME,
+  sfxVolume: DEFAULT_SFX_VOLUME,
 };
 
 const elements = {
@@ -30,13 +36,20 @@ const elements = {
   finalScore: document.getElementById('final-score'),
   resultMessage: document.getElementById('result-message'),
   progressFill: document.getElementById('progress-fill'),
+  bgmToggle: document.getElementById('bgm-toggle'),
+  sfxToggle: document.getElementById('sfx-toggle'),
+  bgmVolume: document.getElementById('bgm-volume'),
+  sfxVolume: document.getElementById('sfx-volume'),
 };
 
 boot();
 
 async function boot() {
   try {
+    loadAudioSettings();
     setupBackgroundMusic();
+    bindEvents();
+    syncAudioControls();
 
     const response = await fetch(DATA_PATH);
     if (!response.ok) {
@@ -49,8 +62,6 @@ async function boot() {
     if (state.pokemonPool.length < 10) {
       throw new Error('퀴즈에 사용할 포켓몬 데이터가 부족합니다.');
     }
-
-    bindEvents();
   } catch (error) {
     showFatalError(error.message);
   }
@@ -59,6 +70,10 @@ async function boot() {
 function bindEvents() {
   elements.startButton.addEventListener('click', startGame);
   elements.restartButton.addEventListener('click', startGame);
+  elements.bgmToggle.addEventListener('click', toggleBgm);
+  elements.sfxToggle.addEventListener('click', toggleSfx);
+  elements.bgmVolume.addEventListener('input', handleBgmVolumeChange);
+  elements.sfxVolume.addEventListener('input', handleSfxVolumeChange);
 }
 
 function normalizePokemon(items) {
@@ -297,16 +312,16 @@ function enableAudio() {
 function setupBackgroundMusic() {
   const bgm = new Audio('./data/bg.m4a');
   bgm.loop = true;
-  bgm.volume = 0.14;
+  bgm.volume = state.bgmVolume;
   bgm.preload = 'auto';
   state.bgm = bgm;
 }
 
 function startBackgroundMusic() {
-  if (!state.bgm) return;
+  if (!state.bgm || !state.bgmEnabled) return;
   state.bgm.pause();
   state.bgm.currentTime = 0;
-  state.bgm.volume = 0.14;
+  state.bgm.volume = state.bgmVolume;
   state.bgm.play().catch(() => {});
 }
 
@@ -314,6 +329,74 @@ function stopBackgroundMusic() {
   if (!state.bgm) return;
   state.bgm.pause();
   state.bgm.currentTime = 0;
+}
+
+function toggleBgm() {
+  state.bgmEnabled = !state.bgmEnabled;
+  if (!state.bgmEnabled) {
+    stopBackgroundMusic();
+  }
+  saveAudioSettings();
+  syncAudioControls();
+}
+
+function toggleSfx() {
+  state.sfxEnabled = !state.sfxEnabled;
+  saveAudioSettings();
+  syncAudioControls();
+}
+
+function handleBgmVolumeChange(event) {
+  state.bgmVolume = Number(event.target.value) / 100;
+  if (state.bgm) {
+    state.bgm.volume = state.bgmVolume;
+  }
+  saveAudioSettings();
+}
+
+function handleSfxVolumeChange(event) {
+  state.sfxVolume = Number(event.target.value) / 100;
+  saveAudioSettings();
+}
+
+function syncAudioControls() {
+  updateToggleButton(elements.bgmToggle, state.bgmEnabled);
+  updateToggleButton(elements.sfxToggle, state.sfxEnabled);
+  elements.bgmVolume.value = String(Math.round(state.bgmVolume * 100));
+  elements.sfxVolume.value = String(Math.round(state.sfxVolume * 100));
+}
+
+function updateToggleButton(button, enabled) {
+  button.textContent = enabled ? 'ON' : 'OFF';
+  button.classList.toggle('off', !enabled);
+  button.setAttribute('aria-pressed', String(enabled));
+}
+
+function loadAudioSettings() {
+  try {
+    const saved = JSON.parse(localStorage.getItem('pokemon-quiz-audio') || '{}');
+    if (typeof saved.bgmEnabled === 'boolean') state.bgmEnabled = saved.bgmEnabled;
+    if (typeof saved.sfxEnabled === 'boolean') state.sfxEnabled = saved.sfxEnabled;
+    if (typeof saved.bgmVolume === 'number') state.bgmVolume = saved.bgmVolume;
+    if (typeof saved.sfxVolume === 'number') state.sfxVolume = saved.sfxVolume;
+  } catch {
+    state.bgmEnabled = true;
+    state.sfxEnabled = true;
+    state.bgmVolume = DEFAULT_BGM_VOLUME;
+    state.sfxVolume = DEFAULT_SFX_VOLUME;
+  }
+}
+
+function saveAudioSettings() {
+  localStorage.setItem(
+    'pokemon-quiz-audio',
+    JSON.stringify({
+      bgmEnabled: state.bgmEnabled,
+      sfxEnabled: state.sfxEnabled,
+      bgmVolume: state.bgmVolume,
+      sfxVolume: state.sfxVolume,
+    }),
+  );
 }
 
 function playCorrectSound() {
@@ -357,7 +440,7 @@ function playPerfectSound() {
 }
 
 function playSequence(notes) {
-  if (!state.audioContext) return;
+  if (!state.audioContext || !state.sfxEnabled || state.sfxVolume <= 0) return;
 
   const now = state.audioContext.currentTime;
   notes.forEach((note) => {
@@ -370,7 +453,7 @@ function playSequence(notes) {
     oscillator.frequency.setValueAtTime(note.frequency, start);
 
     gainNode.gain.setValueAtTime(0.0001, start);
-    gainNode.gain.exponentialRampToValueAtTime(note.gain || 0.03, start + 0.02);
+    gainNode.gain.exponentialRampToValueAtTime((note.gain || 0.03) * state.sfxVolume, start + 0.02);
     gainNode.gain.exponentialRampToValueAtTime(0.0001, end);
 
     oscillator.connect(gainNode);

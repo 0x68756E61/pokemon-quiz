@@ -43,6 +43,11 @@ img {
   display: block;
 }
 
+input[type='range'] {
+  width: 100%;
+  accent-color: var(--yellow);
+}
+
 .app-shell {
   position: relative;
   min-height: 100vh;
@@ -165,6 +170,66 @@ img {
   color: rgba(247, 248, 252, 0.92);
   font-size: 14px;
   font-weight: 700;
+}
+
+.audio-panel {
+  width: min(460px, 100%);
+  padding: 18px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+  border: 1px solid rgba(255,255,255,0.09);
+  display: grid;
+  gap: 14px;
+}
+
+.audio-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.audio-row.compact {
+  margin-top: 4px;
+}
+
+.audio-label {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.audio-help {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.audio-control {
+  display: grid;
+  gap: 8px;
+}
+
+.audio-control span {
+  font-size: 14px;
+  color: rgba(247, 248, 252, 0.88);
+  font-weight: 700;
+}
+
+.sound-toggle {
+  min-width: 72px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.08);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.sound-toggle.off {
+  background: rgba(255,255,255,0.04);
+  color: rgba(247,248,252,0.65);
 }
 
 h1,
@@ -512,6 +577,22 @@ h1 {
 
   .feature-pills span {
     font-size: 13px;
+    padding: 9px 12px;
+  }
+
+  .audio-panel {
+    width: 100%;
+    padding: 14px;
+    border-radius: 20px;
+    gap: 12px;
+  }
+
+  .audio-row {
+    align-items: flex-start;
+  }
+
+  .sound-toggle {
+    min-width: 64px;
     padding: 9px 12px;
   }
 

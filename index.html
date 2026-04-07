@@ -32,6 +32,34 @@
             <span>🏆 10문제 승부</span>
           </div>
 
+          <section class="audio-panel" aria-label="오디오 설정">
+            <div class="audio-row">
+              <div>
+                <p class="audio-label">배경음악</p>
+                <p class="audio-help">게임 중에만 반복 재생됩니다</p>
+              </div>
+              <button id="bgm-toggle" class="sound-toggle" type="button" aria-pressed="true">ON</button>
+            </div>
+
+            <label class="audio-control">
+              <span>배경음 볼륨</span>
+              <input id="bgm-volume" type="range" min="0" max="100" step="1" value="14" />
+            </label>
+
+            <div class="audio-row compact">
+              <div>
+                <p class="audio-label">효과음</p>
+                <p class="audio-help">정답, 오답, 시간초과, 결과음</p>
+              </div>
+              <button id="sfx-toggle" class="sound-toggle" type="button" aria-pressed="true">ON</button>
+            </div>
+
+            <label class="audio-control">
+              <span>효과음 볼륨</span>
+              <input id="sfx-volume" type="range" min="0" max="100" step="1" value="100" />
+            </label>
+          </section>
+
           <button id="start-button" class="primary-button">게임 시작</button>
         </section>
 
