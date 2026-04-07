@@ -238,7 +238,7 @@ function finishGame() {
 }
 
 function getResultMessage(score) {
-  if (score === 10) return '완벽해요! 대표님은 이미 포켓몬 박사급이세요 🏆';
+  if (score === 10) return '완벽해요! 이미 포켓몬 박사급이세요 🏆';
   if (score >= 7) return '오, 꽤 잘 맞히셨어요! 감이 엄청 좋으신데요?';
   if (score >= 4) return '좋아요! 한 판만 더 하면 더 높은 점수 바로 노릴 수 있어요.';
   return '괜찮아요! 다시 하면 금방 감 잡으실 거예요 😎';
