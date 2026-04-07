@@ -18,21 +18,27 @@
       <div class="bg-grid"></div>
 
       <main class="quiz-card">
-        <section id="start-screen" class="screen active">
-          <div class="badge">POKÉMON QUIZ</div>
-          <h1>이름 보고<br />포켓몬 맞히기</h1>
-          <p class="lead">
-            포켓몬 이름을 보고 사진 3개 중 정답을 고르세요.<br />
-            총 10문제, 문제당 10초, 10점 만점입니다.
-          </p>
+        <button id="menu-button" class="menu-button" type="button" aria-expanded="false" aria-controls="settings-drawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-          <div class="feature-pills">
-            <span>⚡ 10초 타이머</span>
-            <span>🖼️ 3지선다</span>
-            <span>🏆 10문제 승부</span>
+        <aside id="settings-drawer" class="settings-drawer" aria-hidden="true">
+          <div class="drawer-header">
+            <div>
+              <p class="drawer-eyebrow">SETTINGS</p>
+              <h3>게임 설정</h3>
+            </div>
+            <button id="close-menu-button" class="drawer-close" type="button" aria-label="설정 닫기">✕</button>
           </div>
 
-          <section class="audio-panel" aria-label="오디오 설정">
+          <section class="audio-panel" aria-label="게임 설정">
+            <label class="audio-control">
+              <span>문제당 제한시간 <strong id="time-limit-value">10초</strong></span>
+              <input id="time-limit" type="range" min="5" max="20" step="1" value="10" />
+            </label>
+
             <div class="audio-row">
               <div>
                 <p class="audio-label">배경음악</p>
@@ -59,6 +65,21 @@
               <input id="sfx-volume" type="range" min="0" max="100" step="1" value="100" />
             </label>
           </section>
+        </aside>
+
+        <section id="start-screen" class="screen active">
+          <div class="badge">POKÉMON QUIZ</div>
+          <h1>이름 보고<br />포켓몬 맞히기</h1>
+          <p class="lead">
+            포켓몬 이름을 보고 사진 3개 중 정답을 고르세요.<br />
+            총 10문제, 제한시간은 설정 메뉴에서 조절할 수 있습니다.
+          </p>
+
+          <div class="feature-pills">
+            <span>⚡ 타이머 조절 가능</span>
+            <span>🖼️ 3지선다</span>
+            <span>🏆 10문제 승부</span>
+          </div>
 
           <button id="start-button" class="primary-button">게임 시작</button>
         </section>
@@ -105,6 +126,7 @@
           <p id="result-message" class="lead"></p>
           <div class="result-actions">
             <button id="restart-button" class="primary-button">다시 하기</button>
+            <button id="home-button" class="secondary-button">홈으로</button>
           </div>
         </section>
       </main>

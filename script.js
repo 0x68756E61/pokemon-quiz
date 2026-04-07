@@ -1,5 +1,5 @@
 const QUIZ_LENGTH = 10;
-const QUESTION_TIME = 10;
+const DEFAULT_QUESTION_TIME = 10;
 const DATA_PATH = './data/pokemon_gen1_ko_images.json';
 const DEFAULT_BGM_VOLUME = 0.14;
 const DEFAULT_SFX_VOLUME = 1;
@@ -9,7 +9,8 @@ const state = {
   questions: [],
   currentIndex: 0,
   score: 0,
-  remainingTime: QUESTION_TIME,
+  questionTime: DEFAULT_QUESTION_TIME,
+  remainingTime: DEFAULT_QUESTION_TIME,
   timerId: null,
   locked: false,
   audioEnabled: false,
@@ -19,6 +20,7 @@ const state = {
   sfxEnabled: true,
   bgmVolume: DEFAULT_BGM_VOLUME,
   sfxVolume: DEFAULT_SFX_VOLUME,
+  menuOpen: false,
 };
 
 const elements = {
@@ -27,6 +29,7 @@ const elements = {
   resultScreen: document.getElementById('result-screen'),
   startButton: document.getElementById('start-button'),
   restartButton: document.getElementById('restart-button'),
+  homeButton: document.getElementById('home-button'),
   questionProgress: document.getElementById('question-progress'),
   scoreProgress: document.getElementById('score-progress'),
   timerText: document.getElementById('timer-text'),
@@ -40,16 +43,21 @@ const elements = {
   sfxToggle: document.getElementById('sfx-toggle'),
   bgmVolume: document.getElementById('bgm-volume'),
   sfxVolume: document.getElementById('sfx-volume'),
+  timeLimit: document.getElementById('time-limit'),
+  timeLimitValue: document.getElementById('time-limit-value'),
+  menuButton: document.getElementById('menu-button'),
+  closeMenuButton: document.getElementById('close-menu-button'),
+  settingsDrawer: document.getElementById('settings-drawer'),
 };
 
 boot();
 
 async function boot() {
   try {
-    loadAudioSettings();
+    loadSettings();
     setupBackgroundMusic();
     bindEvents();
-    syncAudioControls();
+    syncControls();
 
     const response = await fetch(DATA_PATH);
     if (!response.ok) {
@@ -70,10 +78,14 @@ async function boot() {
 function bindEvents() {
   elements.startButton.addEventListener('click', startGame);
   elements.restartButton.addEventListener('click', startGame);
+  elements.homeButton.addEventListener('click', goHome);
   elements.bgmToggle.addEventListener('click', toggleBgm);
   elements.sfxToggle.addEventListener('click', toggleSfx);
   elements.bgmVolume.addEventListener('input', handleBgmVolumeChange);
   elements.sfxVolume.addEventListener('input', handleSfxVolumeChange);
+  elements.timeLimit.addEventListener('input', handleTimeLimitChange);
+  elements.menuButton.addEventListener('click', toggleMenu);
+  elements.closeMenuButton.addEventListener('click', closeMenu);
 }
 
 function normalizePokemon(items) {
@@ -101,6 +113,7 @@ function normalizePokemon(items) {
 }
 
 function startGame() {
+  closeMenu();
   enableAudio();
   startBackgroundMusic();
   clearTimer();
@@ -109,6 +122,13 @@ function startGame() {
   state.questions = createQuizQuestions(state.pokemonPool, QUIZ_LENGTH);
   switchScreen('quiz');
   renderQuestion();
+}
+
+function goHome() {
+  clearTimer();
+  stopBackgroundMusic();
+  closeMenu();
+  switchScreen('start');
 }
 
 function createQuizQuestions(pool, count) {
@@ -129,7 +149,7 @@ function renderQuestion() {
   }
 
   state.locked = false;
-  state.remainingTime = QUESTION_TIME;
+  state.remainingTime = state.questionTime;
   elements.feedback.textContent = '';
   elements.feedback.className = 'feedback';
   elements.questionProgress.textContent = `${state.currentIndex + 1} / ${QUIZ_LENGTH}`;
@@ -192,7 +212,7 @@ function startTimer() {
 
 function updateTimerUI() {
   elements.timerText.textContent = String(state.remainingTime);
-  const progress = Math.max(0, state.remainingTime / QUESTION_TIME);
+  const progress = Math.max(0, state.remainingTime / state.questionTime);
   document.documentElement.style.setProperty('--timer-progress', progress.toString());
 }
 
@@ -336,14 +356,14 @@ function toggleBgm() {
   if (!state.bgmEnabled) {
     stopBackgroundMusic();
   }
-  saveAudioSettings();
-  syncAudioControls();
+  saveSettings();
+  syncControls();
 }
 
 function toggleSfx() {
   state.sfxEnabled = !state.sfxEnabled;
-  saveAudioSettings();
-  syncAudioControls();
+  saveSettings();
+  syncControls();
 }
 
 function handleBgmVolumeChange(event) {
@@ -351,19 +371,27 @@ function handleBgmVolumeChange(event) {
   if (state.bgm) {
     state.bgm.volume = state.bgmVolume;
   }
-  saveAudioSettings();
+  saveSettings();
 }
 
 function handleSfxVolumeChange(event) {
   state.sfxVolume = Number(event.target.value) / 100;
-  saveAudioSettings();
+  saveSettings();
 }
 
-function syncAudioControls() {
+function handleTimeLimitChange(event) {
+  state.questionTime = Number(event.target.value);
+  elements.timeLimitValue.textContent = `${state.questionTime}초`;
+  saveSettings();
+}
+
+function syncControls() {
   updateToggleButton(elements.bgmToggle, state.bgmEnabled);
   updateToggleButton(elements.sfxToggle, state.sfxEnabled);
   elements.bgmVolume.value = String(Math.round(state.bgmVolume * 100));
   elements.sfxVolume.value = String(Math.round(state.sfxVolume * 100));
+  elements.timeLimit.value = String(state.questionTime);
+  elements.timeLimitValue.textContent = `${state.questionTime}초`;
 }
 
 function updateToggleButton(button, enabled) {
@@ -372,29 +400,54 @@ function updateToggleButton(button, enabled) {
   button.setAttribute('aria-pressed', String(enabled));
 }
 
-function loadAudioSettings() {
+function toggleMenu() {
+  if (state.menuOpen) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+}
+
+function openMenu() {
+  state.menuOpen = true;
+  elements.settingsDrawer.classList.add('open');
+  elements.settingsDrawer.setAttribute('aria-hidden', 'false');
+  elements.menuButton.setAttribute('aria-expanded', 'true');
+}
+
+function closeMenu() {
+  state.menuOpen = false;
+  elements.settingsDrawer.classList.remove('open');
+  elements.settingsDrawer.setAttribute('aria-hidden', 'true');
+  elements.menuButton.setAttribute('aria-expanded', 'false');
+}
+
+function loadSettings() {
   try {
-    const saved = JSON.parse(localStorage.getItem('pokemon-quiz-audio') || '{}');
+    const saved = JSON.parse(localStorage.getItem('pokemon-quiz-settings') || '{}');
     if (typeof saved.bgmEnabled === 'boolean') state.bgmEnabled = saved.bgmEnabled;
     if (typeof saved.sfxEnabled === 'boolean') state.sfxEnabled = saved.sfxEnabled;
     if (typeof saved.bgmVolume === 'number') state.bgmVolume = saved.bgmVolume;
     if (typeof saved.sfxVolume === 'number') state.sfxVolume = saved.sfxVolume;
+    if (typeof saved.questionTime === 'number') state.questionTime = saved.questionTime;
   } catch {
     state.bgmEnabled = true;
     state.sfxEnabled = true;
     state.bgmVolume = DEFAULT_BGM_VOLUME;
     state.sfxVolume = DEFAULT_SFX_VOLUME;
+    state.questionTime = DEFAULT_QUESTION_TIME;
   }
 }
 
-function saveAudioSettings() {
+function saveSettings() {
   localStorage.setItem(
-    'pokemon-quiz-audio',
+    'pokemon-quiz-settings',
     JSON.stringify({
       bgmEnabled: state.bgmEnabled,
       sfxEnabled: state.sfxEnabled,
       bgmVolume: state.bgmVolume,
       sfxVolume: state.sfxVolume,
+      questionTime: state.questionTime,
     }),
   );
 }
