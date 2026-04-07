@@ -1,0 +1,1043 @@
+{
+  "source": "https://pokemonkorea.co.kr/pokedex",
+  "region": "관동지방",
+  "range": [
+    1,
+    151
+  ],
+  "count": 172,
+  "items": [
+    {
+      "entry_id": 1,
+      "dex_number": 1,
+      "name_ko": "이상해씨",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000101.png"
+    },
+    {
+      "entry_id": 2,
+      "dex_number": 2,
+      "name_ko": "이상해풀",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000201.png"
+    },
+    {
+      "entry_id": 3,
+      "dex_number": 3,
+      "name_ko": "이상해꽃",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000301.png"
+    },
+    {
+      "entry_id": 4,
+      "dex_number": 3,
+      "name_ko": "메가이상해꽃",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000302.png"
+    },
+    {
+      "entry_id": 6,
+      "dex_number": 4,
+      "name_ko": "파이리",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000401.png"
+    },
+    {
+      "entry_id": 7,
+      "dex_number": 5,
+      "name_ko": "리자드",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000501.png"
+    },
+    {
+      "entry_id": 8,
+      "dex_number": 6,
+      "name_ko": "리자몽",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000601.png"
+    },
+    {
+      "entry_id": 9,
+      "dex_number": 6,
+      "name_ko": "메가리자몽X",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000602.png"
+    },
+    {
+      "entry_id": 10,
+      "dex_number": 6,
+      "name_ko": "메가리자몽Y",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000603.png"
+    },
+    {
+      "entry_id": 12,
+      "dex_number": 7,
+      "name_ko": "꼬부기",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000701.png"
+    },
+    {
+      "entry_id": 13,
+      "dex_number": 8,
+      "name_ko": "어니부기",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000801.png"
+    },
+    {
+      "entry_id": 14,
+      "dex_number": 9,
+      "name_ko": "거북왕",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000901.png"
+    },
+    {
+      "entry_id": 15,
+      "dex_number": 9,
+      "name_ko": "메가거북왕",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000902.png"
+    },
+    {
+      "entry_id": 17,
+      "dex_number": 10,
+      "name_ko": "캐터피",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/001001.png"
+    },
+    {
+      "entry_id": 18,
+      "dex_number": 11,
+      "name_ko": "단데기",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/001101.png"
+    },
+    {
+      "entry_id": 19,
+      "dex_number": 12,
+      "name_ko": "버터플",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/001201.png"
+    },
+    {
+      "entry_id": 21,
+      "dex_number": 13,
+      "name_ko": "뿔충이",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/001301.png"
+    },
+    {
+      "entry_id": 22,
+      "dex_number": 14,
+      "name_ko": "딱충이",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/001401.png"
+    },
+    {
+      "entry_id": 23,
+      "dex_number": 15,
+      "name_ko": "독침붕",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/001501.png"
+    },
+    {
+      "entry_id": 24,
+      "dex_number": 15,
+      "name_ko": "메가독침붕",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/001502.png"
+    },
+    {
+      "entry_id": 25,
+      "dex_number": 16,
+      "name_ko": "구구",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/001601.png"
+    },
+    {
+      "entry_id": 26,
+      "dex_number": 17,
+      "name_ko": "피죤",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/001701.png"
+    },
+    {
+      "entry_id": 27,
+      "dex_number": 18,
+      "name_ko": "피죤투",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/001801.png"
+    },
+    {
+      "entry_id": 28,
+      "dex_number": 18,
+      "name_ko": "메가피죤투",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/001802.png"
+    },
+    {
+      "entry_id": 29,
+      "dex_number": 19,
+      "name_ko": "꼬렛",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/001901.png"
+    },
+    {
+      "entry_id": 31,
+      "dex_number": 20,
+      "name_ko": "레트라",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/002001.png"
+    },
+    {
+      "entry_id": 33,
+      "dex_number": 21,
+      "name_ko": "깨비참",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/002101.png"
+    },
+    {
+      "entry_id": 34,
+      "dex_number": 22,
+      "name_ko": "깨비드릴조",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/002201.png"
+    },
+    {
+      "entry_id": 35,
+      "dex_number": 23,
+      "name_ko": "아보",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/002301.png"
+    },
+    {
+      "entry_id": 36,
+      "dex_number": 24,
+      "name_ko": "아보크",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/002401.png"
+    },
+    {
+      "entry_id": 37,
+      "dex_number": 25,
+      "name_ko": "피카츄",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/002501.png"
+    },
+    {
+      "entry_id": 39,
+      "dex_number": 26,
+      "name_ko": "라이츄",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/002601.png"
+    },
+    {
+      "entry_id": 41,
+      "dex_number": 26,
+      "name_ko": "메가라이츄X",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/002603.png"
+    },
+    {
+      "entry_id": 42,
+      "dex_number": 26,
+      "name_ko": "메가라이츄Y",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/002604.png"
+    },
+    {
+      "entry_id": 43,
+      "dex_number": 27,
+      "name_ko": "모래두지",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/002701.png"
+    },
+    {
+      "entry_id": 45,
+      "dex_number": 28,
+      "name_ko": "고지",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/002801.png"
+    },
+    {
+      "entry_id": 47,
+      "dex_number": 29,
+      "name_ko": "니드런♀",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/002901.png"
+    },
+    {
+      "entry_id": 48,
+      "dex_number": 30,
+      "name_ko": "니드리나",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/003001.png"
+    },
+    {
+      "entry_id": 49,
+      "dex_number": 31,
+      "name_ko": "니드퀸",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/003101.png"
+    },
+    {
+      "entry_id": 50,
+      "dex_number": 32,
+      "name_ko": "니드런♂",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/003201.png"
+    },
+    {
+      "entry_id": 51,
+      "dex_number": 33,
+      "name_ko": "니드리노",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/003301.png"
+    },
+    {
+      "entry_id": 52,
+      "dex_number": 34,
+      "name_ko": "니드킹",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/003401.png"
+    },
+    {
+      "entry_id": 53,
+      "dex_number": 35,
+      "name_ko": "삐삐",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/003501.png"
+    },
+    {
+      "entry_id": 54,
+      "dex_number": 36,
+      "name_ko": "픽시",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/003601.png"
+    },
+    {
+      "entry_id": 55,
+      "dex_number": 36,
+      "name_ko": "메가픽시",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/003602.png"
+    },
+    {
+      "entry_id": 56,
+      "dex_number": 37,
+      "name_ko": "식스테일",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/003701.png"
+    },
+    {
+      "entry_id": 58,
+      "dex_number": 38,
+      "name_ko": "나인테일",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/003801.png"
+    },
+    {
+      "entry_id": 60,
+      "dex_number": 39,
+      "name_ko": "푸린",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/003901.png"
+    },
+    {
+      "entry_id": 61,
+      "dex_number": 40,
+      "name_ko": "푸크린",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/004001.png"
+    },
+    {
+      "entry_id": 62,
+      "dex_number": 41,
+      "name_ko": "주뱃",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/004101.png"
+    },
+    {
+      "entry_id": 63,
+      "dex_number": 42,
+      "name_ko": "골뱃",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/004201.png"
+    },
+    {
+      "entry_id": 64,
+      "dex_number": 43,
+      "name_ko": "뚜벅쵸",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/004301.png"
+    },
+    {
+      "entry_id": 65,
+      "dex_number": 44,
+      "name_ko": "냄새꼬",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/004401.png"
+    },
+    {
+      "entry_id": 66,
+      "dex_number": 45,
+      "name_ko": "라플레시아",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/004501.png"
+    },
+    {
+      "entry_id": 67,
+      "dex_number": 46,
+      "name_ko": "파라스",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/004601.png"
+    },
+    {
+      "entry_id": 68,
+      "dex_number": 47,
+      "name_ko": "파라섹트",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/004701.png"
+    },
+    {
+      "entry_id": 69,
+      "dex_number": 48,
+      "name_ko": "콘팡",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/004801.png"
+    },
+    {
+      "entry_id": 70,
+      "dex_number": 49,
+      "name_ko": "도나리",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/004901.png"
+    },
+    {
+      "entry_id": 71,
+      "dex_number": 50,
+      "name_ko": "디그다",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/005001.png"
+    },
+    {
+      "entry_id": 73,
+      "dex_number": 51,
+      "name_ko": "닥트리오",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/005101.png"
+    },
+    {
+      "entry_id": 75,
+      "dex_number": 52,
+      "name_ko": "나옹",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/005201.png"
+    },
+    {
+      "entry_id": 79,
+      "dex_number": 53,
+      "name_ko": "페르시온",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/005301.png"
+    },
+    {
+      "entry_id": 81,
+      "dex_number": 54,
+      "name_ko": "고라파덕",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/005401.png"
+    },
+    {
+      "entry_id": 82,
+      "dex_number": 55,
+      "name_ko": "골덕",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/005501.png"
+    },
+    {
+      "entry_id": 83,
+      "dex_number": 56,
+      "name_ko": "망키",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/005601.png"
+    },
+    {
+      "entry_id": 84,
+      "dex_number": 57,
+      "name_ko": "성원숭",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/005701.png"
+    },
+    {
+      "entry_id": 85,
+      "dex_number": 58,
+      "name_ko": "가디",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/005801.png"
+    },
+    {
+      "entry_id": 87,
+      "dex_number": 59,
+      "name_ko": "윈디",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/005901.png"
+    },
+    {
+      "entry_id": 89,
+      "dex_number": 60,
+      "name_ko": "발챙이",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/006001.png"
+    },
+    {
+      "entry_id": 90,
+      "dex_number": 61,
+      "name_ko": "슈륙챙이",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/006101.png"
+    },
+    {
+      "entry_id": 91,
+      "dex_number": 62,
+      "name_ko": "강챙이",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/006201.png"
+    },
+    {
+      "entry_id": 92,
+      "dex_number": 63,
+      "name_ko": "캐이시",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/006301.png"
+    },
+    {
+      "entry_id": 93,
+      "dex_number": 64,
+      "name_ko": "윤겔라",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/006401.png"
+    },
+    {
+      "entry_id": 94,
+      "dex_number": 65,
+      "name_ko": "후딘",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/006501.png"
+    },
+    {
+      "entry_id": 95,
+      "dex_number": 65,
+      "name_ko": "메가후딘",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/006502.png"
+    },
+    {
+      "entry_id": 96,
+      "dex_number": 66,
+      "name_ko": "알통몬",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/006601.png"
+    },
+    {
+      "entry_id": 97,
+      "dex_number": 67,
+      "name_ko": "근육몬",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/006701.png"
+    },
+    {
+      "entry_id": 98,
+      "dex_number": 68,
+      "name_ko": "괴력몬",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/006801.png"
+    },
+    {
+      "entry_id": 100,
+      "dex_number": 69,
+      "name_ko": "모다피",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/006901.png"
+    },
+    {
+      "entry_id": 101,
+      "dex_number": 70,
+      "name_ko": "우츠동",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/007001.png"
+    },
+    {
+      "entry_id": 102,
+      "dex_number": 71,
+      "name_ko": "우츠보트",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/007101.png"
+    },
+    {
+      "entry_id": 103,
+      "dex_number": 71,
+      "name_ko": "메가우츠보트",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/007102.png"
+    },
+    {
+      "entry_id": 104,
+      "dex_number": 72,
+      "name_ko": "왕눈해",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/007201.png"
+    },
+    {
+      "entry_id": 105,
+      "dex_number": 73,
+      "name_ko": "독파리",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/007301.png"
+    },
+    {
+      "entry_id": 106,
+      "dex_number": 74,
+      "name_ko": "꼬마돌",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/007401.png"
+    },
+    {
+      "entry_id": 108,
+      "dex_number": 75,
+      "name_ko": "데구리",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/007501.png"
+    },
+    {
+      "entry_id": 110,
+      "dex_number": 76,
+      "name_ko": "딱구리",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/007601.png"
+    },
+    {
+      "entry_id": 112,
+      "dex_number": 77,
+      "name_ko": "포니타",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/007701.png"
+    },
+    {
+      "entry_id": 114,
+      "dex_number": 78,
+      "name_ko": "날쌩마",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/007801.png"
+    },
+    {
+      "entry_id": 116,
+      "dex_number": 79,
+      "name_ko": "야돈",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/007901.png"
+    },
+    {
+      "entry_id": 118,
+      "dex_number": 80,
+      "name_ko": "야도란",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/008001.png"
+    },
+    {
+      "entry_id": 119,
+      "dex_number": 80,
+      "name_ko": "메가야도란",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/008002.png"
+    },
+    {
+      "entry_id": 121,
+      "dex_number": 81,
+      "name_ko": "코일",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/008101.png"
+    },
+    {
+      "entry_id": 122,
+      "dex_number": 82,
+      "name_ko": "레어코일",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/008201.png"
+    },
+    {
+      "entry_id": 123,
+      "dex_number": 83,
+      "name_ko": "파오리",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/008301.png"
+    },
+    {
+      "entry_id": 125,
+      "dex_number": 84,
+      "name_ko": "두두",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/008401.png"
+    },
+    {
+      "entry_id": 126,
+      "dex_number": 85,
+      "name_ko": "두트리오",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/008501.png"
+    },
+    {
+      "entry_id": 127,
+      "dex_number": 86,
+      "name_ko": "쥬쥬",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/008601.png"
+    },
+    {
+      "entry_id": 128,
+      "dex_number": 87,
+      "name_ko": "쥬레곤",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/008701.png"
+    },
+    {
+      "entry_id": 129,
+      "dex_number": 88,
+      "name_ko": "질퍽이",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/008801.png"
+    },
+    {
+      "entry_id": 131,
+      "dex_number": 89,
+      "name_ko": "질뻐기",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/008901.png"
+    },
+    {
+      "entry_id": 133,
+      "dex_number": 90,
+      "name_ko": "셀러",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/009001.png"
+    },
+    {
+      "entry_id": 134,
+      "dex_number": 91,
+      "name_ko": "파르셀",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/009101.png"
+    },
+    {
+      "entry_id": 135,
+      "dex_number": 92,
+      "name_ko": "고오스",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/009201.png"
+    },
+    {
+      "entry_id": 136,
+      "dex_number": 93,
+      "name_ko": "고우스트",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/009301.png"
+    },
+    {
+      "entry_id": 137,
+      "dex_number": 94,
+      "name_ko": "팬텀",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/009401.png"
+    },
+    {
+      "entry_id": 138,
+      "dex_number": 94,
+      "name_ko": "메가팬텀",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/009402.png"
+    },
+    {
+      "entry_id": 140,
+      "dex_number": 95,
+      "name_ko": "롱스톤",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/009501.png"
+    },
+    {
+      "entry_id": 141,
+      "dex_number": 96,
+      "name_ko": "슬리프",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/009601.png"
+    },
+    {
+      "entry_id": 142,
+      "dex_number": 97,
+      "name_ko": "슬리퍼",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/009701.png"
+    },
+    {
+      "entry_id": 143,
+      "dex_number": 98,
+      "name_ko": "크랩",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/009801.png"
+    },
+    {
+      "entry_id": 144,
+      "dex_number": 99,
+      "name_ko": "킹크랩",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/009901.png"
+    },
+    {
+      "entry_id": 146,
+      "dex_number": 100,
+      "name_ko": "찌리리공",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/010001.png"
+    },
+    {
+      "entry_id": 148,
+      "dex_number": 101,
+      "name_ko": "붐볼",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/010101.png"
+    },
+    {
+      "entry_id": 150,
+      "dex_number": 102,
+      "name_ko": "아라리",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/010201.png"
+    },
+    {
+      "entry_id": 151,
+      "dex_number": 103,
+      "name_ko": "나시",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/010301.png"
+    },
+    {
+      "entry_id": 153,
+      "dex_number": 104,
+      "name_ko": "탕구리",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/010401.png"
+    },
+    {
+      "entry_id": 154,
+      "dex_number": 105,
+      "name_ko": "텅구리",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/010501.png"
+    },
+    {
+      "entry_id": 156,
+      "dex_number": 106,
+      "name_ko": "시라소몬",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/010601.png"
+    },
+    {
+      "entry_id": 157,
+      "dex_number": 107,
+      "name_ko": "홍수몬",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/010701.png"
+    },
+    {
+      "entry_id": 158,
+      "dex_number": 108,
+      "name_ko": "내루미",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/010801.png"
+    },
+    {
+      "entry_id": 159,
+      "dex_number": 109,
+      "name_ko": "또가스",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/010901.png"
+    },
+    {
+      "entry_id": 160,
+      "dex_number": 110,
+      "name_ko": "또도가스",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/011001.png"
+    },
+    {
+      "entry_id": 162,
+      "dex_number": 111,
+      "name_ko": "뿔카노",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/011101.png"
+    },
+    {
+      "entry_id": 163,
+      "dex_number": 112,
+      "name_ko": "코뿌리",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/011201.png"
+    },
+    {
+      "entry_id": 164,
+      "dex_number": 113,
+      "name_ko": "럭키",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/011301.png"
+    },
+    {
+      "entry_id": 165,
+      "dex_number": 114,
+      "name_ko": "덩쿠리",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/011401.png"
+    },
+    {
+      "entry_id": 166,
+      "dex_number": 115,
+      "name_ko": "캥카",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/011501.png"
+    },
+    {
+      "entry_id": 167,
+      "dex_number": 115,
+      "name_ko": "메가캥카",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/011502.png"
+    },
+    {
+      "entry_id": 168,
+      "dex_number": 116,
+      "name_ko": "쏘드라",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/011601.png"
+    },
+    {
+      "entry_id": 169,
+      "dex_number": 117,
+      "name_ko": "시드라",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/011701.png"
+    },
+    {
+      "entry_id": 170,
+      "dex_number": 118,
+      "name_ko": "콘치",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/011801.png"
+    },
+    {
+      "entry_id": 171,
+      "dex_number": 119,
+      "name_ko": "왕콘치",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/011901.png"
+    },
+    {
+      "entry_id": 172,
+      "dex_number": 120,
+      "name_ko": "별가사리",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/012001.png"
+    },
+    {
+      "entry_id": 173,
+      "dex_number": 121,
+      "name_ko": "아쿠스타",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/012101.png"
+    },
+    {
+      "entry_id": 174,
+      "dex_number": 121,
+      "name_ko": "메가아쿠스타",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/012102.png"
+    },
+    {
+      "entry_id": 175,
+      "dex_number": 122,
+      "name_ko": "마임맨",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/012201.png"
+    },
+    {
+      "entry_id": 177,
+      "dex_number": 123,
+      "name_ko": "스라크",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/012301.png"
+    },
+    {
+      "entry_id": 178,
+      "dex_number": 124,
+      "name_ko": "루주라",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/012401.png"
+    },
+    {
+      "entry_id": 179,
+      "dex_number": 125,
+      "name_ko": "에레브",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/012501.png"
+    },
+    {
+      "entry_id": 180,
+      "dex_number": 126,
+      "name_ko": "마그마",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/012601.png"
+    },
+    {
+      "entry_id": 181,
+      "dex_number": 127,
+      "name_ko": "쁘사이저",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/012701.png"
+    },
+    {
+      "entry_id": 182,
+      "dex_number": 127,
+      "name_ko": "메가쁘사이저",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/012702.png"
+    },
+    {
+      "entry_id": 183,
+      "dex_number": 128,
+      "name_ko": "켄타로스",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/012801.png"
+    },
+    {
+      "entry_id": 187,
+      "dex_number": 129,
+      "name_ko": "잉어킹",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/012901.png"
+    },
+    {
+      "entry_id": 188,
+      "dex_number": 130,
+      "name_ko": "갸라도스",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/013001.png"
+    },
+    {
+      "entry_id": 189,
+      "dex_number": 130,
+      "name_ko": "메가갸라도스",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/013002.png"
+    },
+    {
+      "entry_id": 190,
+      "dex_number": 131,
+      "name_ko": "라프라스",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/013103.png"
+    },
+    {
+      "entry_id": 192,
+      "dex_number": 132,
+      "name_ko": "메타몽",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/013201.png"
+    },
+    {
+      "entry_id": 193,
+      "dex_number": 133,
+      "name_ko": "이브이",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/013301.png"
+    },
+    {
+      "entry_id": 195,
+      "dex_number": 134,
+      "name_ko": "샤미드",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/013401.png"
+    },
+    {
+      "entry_id": 196,
+      "dex_number": 135,
+      "name_ko": "쥬피썬더",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/013501.png"
+    },
+    {
+      "entry_id": 197,
+      "dex_number": 136,
+      "name_ko": "부스터",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/013601.png"
+    },
+    {
+      "entry_id": 198,
+      "dex_number": 137,
+      "name_ko": "폴리곤",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/013701.png"
+    },
+    {
+      "entry_id": 199,
+      "dex_number": 138,
+      "name_ko": "암나이트",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/013801.png"
+    },
+    {
+      "entry_id": 200,
+      "dex_number": 139,
+      "name_ko": "암스타",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/013901.png"
+    },
+    {
+      "entry_id": 201,
+      "dex_number": 140,
+      "name_ko": "투구",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/014001.png"
+    },
+    {
+      "entry_id": 202,
+      "dex_number": 141,
+      "name_ko": "투구푸스",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/014101.png"
+    },
+    {
+      "entry_id": 203,
+      "dex_number": 142,
+      "name_ko": "프테라",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/014201.png"
+    },
+    {
+      "entry_id": 204,
+      "dex_number": 142,
+      "name_ko": "메가프테라",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/014202.png"
+    },
+    {
+      "entry_id": 205,
+      "dex_number": 143,
+      "name_ko": "잠만보",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/014301.png"
+    },
+    {
+      "entry_id": 207,
+      "dex_number": 144,
+      "name_ko": "프리져",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/014401.png"
+    },
+    {
+      "entry_id": 209,
+      "dex_number": 145,
+      "name_ko": "썬더",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/014501.png"
+    },
+    {
+      "entry_id": 211,
+      "dex_number": 146,
+      "name_ko": "파이어",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/014601.png"
+    },
+    {
+      "entry_id": 213,
+      "dex_number": 147,
+      "name_ko": "미뇽",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/014701.png"
+    },
+    {
+      "entry_id": 214,
+      "dex_number": 148,
+      "name_ko": "신뇽",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/014801.png"
+    },
+    {
+      "entry_id": 215,
+      "dex_number": 149,
+      "name_ko": "망나뇽",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/014901.png"
+    },
+    {
+      "entry_id": 216,
+      "dex_number": 149,
+      "name_ko": "메가망나뇽",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/014902.png"
+    },
+    {
+      "entry_id": 217,
+      "dex_number": 150,
+      "name_ko": "뮤츠",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/015001.png"
+    },
+    {
+      "entry_id": 218,
+      "dex_number": 150,
+      "name_ko": "메가뮤츠X",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/015002.png"
+    },
+    {
+      "entry_id": 219,
+      "dex_number": 150,
+      "name_ko": "메가뮤츠Y",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/015003.png"
+    },
+    {
+      "entry_id": 220,
+      "dex_number": 151,
+      "name_ko": "뮤",
+      "image_url": "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/015101.png"
+    }
+  ]
+}

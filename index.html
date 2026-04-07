@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포켓몬 이름 맞히기 퀴즈</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="bg-orb orb-1"></div>
+      <div class="bg-orb orb-2"></div>
+      <div class="bg-grid"></div>
+
+      <main class="quiz-card">
+        <section id="start-screen" class="screen active">
+          <div class="badge">POKÉMON QUIZ</div>
+          <h1>이름 보고<br />포켓몬 맞히기</h1>
+          <p class="lead">
+            포켓몬 이름을 보고 사진 3개 중 정답을 고르세요.<br />
+            총 10문제, 문제당 10초, 10점 만점입니다.
+          </p>
+          <button id="start-button" class="primary-button">게임 시작</button>
+        </section>
+
+        <section id="quiz-screen" class="screen" aria-live="polite">
+          <header class="quiz-header">
+            <div>
+              <p class="label">문제 진행</p>
+              <div class="stat-row">
+                <span id="question-progress">1 / 10</span>
+                <span class="dot"></span>
+                <span id="score-progress">점수 0</span>
+              </div>
+            </div>
+            <div class="timer-wrap">
+              <div class="timer-ring">
+                <span id="timer-text">10</span>
+              </div>
+              <p class="timer-label">초 남음</p>
+            </div>
+          </header>
+
+          <section class="question-panel">
+            <p class="label">이 포켓몬은 누구일까요?</p>
+            <h2 id="pokemon-name">이상해씨</h2>
+          </section>
+
+          <section>
+            <div id="choices" class="choices" role="list"></div>
+          </section>
+
+          <div id="feedback" class="feedback" aria-live="assertive"></div>
+        </section>
+
+        <section id="result-screen" class="screen">
+          <div class="badge">RESULT</div>
+          <h2>이번 점수는</h2>
+          <div class="score-display"><span id="final-score">0</span><small>/ 10</small></div>
+          <p id="result-message" class="lead"></p>
+          <div class="result-actions">
+            <button id="restart-button" class="primary-button">다시 하기</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
